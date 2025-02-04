@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --scale: 6.5;
+}
+
+* {
+
+    color: rgb(255, 255, 255);
+    font-family: "Bebas Neue", serif;
+
+    user-select: none;
+
+    /*transition: .2s;*/
+
+    image-rendering: pixelated;
+
+    background-repeat: no-repeat !important;
+
+}
+html {
+    background-color: rgb(15, 15, 15);
+}
+
+body {
+
+    margin: 20px;
+
+}
+
+button {
+
+    background-color: rgb(15, 15, 15);
+    border-radius: 0px;
+    border: none;
+
+    border:2px solid rgb(41, 41, 41);
+
+    padding: 2px 10px;
+
+    color: rgb(82, 82, 82);
+
+    cursor: pointer;
+
+    margin: 5px 0px;
+
+}
+button:hover {
+
+    color: rgb(121, 121, 121);
+
+}
+
+input {
+
+    border: none;
+    background: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.menus {
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.menu {
+    min-width: 100px;
+    min-height: 100px;
+    border:2px solid rgb(41, 41, 41);
+    padding: 5px;
+    margin: 8px;
+    background: inherit;
+    display: flex;
+    flex-direction: column;
+    background: rgb(15, 15, 15);
+}
+.menu-title {
+
+    color: rgb(41, 41, 41);
+    background: inherit;
+
+    display: block;
+
+    width: fit-content;
+
+    padding: 0px 5px;
+
+    transform: translateY(-15px);
+
+    margin-bottom: -20px;
+
+}
+
+.menu-content {
+    z-index: 99;
+    color: rgb(79, 79, 79);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-content.alt {
+
+    padding: 5px;
+
+}
+.menu-content.alt button {
+    margin-top: 10px;
+}
+
+.settings {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.settings * {
+    color: rgb(79, 79, 79);
+}
+.setting {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 5px;
+
+}
+.setting input {
+
+    background:rgb(35, 35, 35);
+
+    padding: 5px;
+    box-sizing: border-box;
+
+    color: white;
+    font-size: 14px;
+    width: 205px;
+
+}
+.setting select {
+    width: 124px;
+    background:rgb(35, 35, 35);
+
+    padding: 5px;
+    box-sizing: border-box;
+
+    border: none;
+
+    color: white;
+}
+
+/*card things*/
+#card * {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.card-container {
+
+    background-color: rgba(33, 33, 33, 0);
+    overflow: hidden;
+
+}
+
+.outline {
+
+    width: calc(64px * var(--scale));
+    height: calc(88px * var(--scale));
+    background-color: #e1ad01;
+    border-radius: 8px;
+
+    grid-template-columns: 1fr;
+    display: inline-grid;
+
+}
+
+.outline div {
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+}
+.baseContainer {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.base {
+
+    width: 95%;
+    height: 96%;
+    background-color: rgb(121, 121, 121);
+
+}
+
+.outline.corp .base {
+    background: url('assets/circle-blues.png') !important;
+    background-position: center !important;
+}
+.outline.corp .attack {
+    color: white;
+}
+.outline.corp .title {
+    color: white;
+}
+.outline.corp .revs {
+    color: white;
+}
+.outline.corp .damage span {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.outline.corp .weakness .grid .title {
+    color: white;
+}
+.outline.corp hr {
+    border: 1.5px solid white;
+}
+.outline.corp .desc {
+    color: white;
+}
+
+.outline.swge .base {
+    background: url('assets/sewagebg.png') !important;
+    background-size: 300% !important;
+    background-position: center !important;
+}
+.outline.swge .attack {
+    color: white;
+}
+.outline.swge .title {
+    color: white;
+}
+.outline.swge .revs {
+    color: white;
+}
+.outline.swge .damage span {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.outline.swge .weakness .grid .title {
+    color: white;
+}
+.outline.swge hr {
+    border: 1.5px solid white;
+}
+.outline.swge .desc {
+    color: white;
+}
+
+.outline.soda .base {
+    background: url('assets/sodabg.png') !important;
+    background-size: 300% !important;
+    background-position: center !important;
+}
+.outline.soda .attack {
+    color: white;
+}
+.outline.soda .title {
+    color: white;
+}
+.outline.soda .revs {
+    color: white;
+}
+.outline.soda .damage span {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.outline.soda .weakness .grid .title {
+    color: white;
+}
+.outline.soda hr {
+    border: 1.5px solid white;
+}
+.outline.soda .desc {
+    color: white;
+}
+
+.outline.absr .base {
+    background: url('assets/rainbow.png') !important;
+    background-size: 300% !important;
+    background-position: center !important;
+}
+
+.outline.minm .base {
+    background: url('assets/repeated-square.png') !important;
+    background-size: 100% !important;
+    background-position: center !important;
+}
+
+.outline.full .artContainer {
+
+    display: none;
+
+}
+.outline.full .attack {
+    color: white;
+}
+.outline.full .title {
+    color: white;
+}
+.outline.full .revs {
+    color: white;
+}
+.outline.full .damage span {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.outline.full .weakness .grid .title {
+    color: white;
+    text-shadow: 1px 1px 2px black !important;
+}
+.outline.full .desc {
+    color: white;
+}
+.outline.swge hr {
+    border: 1.5px solid white;
+}
+.outline .base {
+    background: unset;
+}
+.outline.full .base {
+    background: grey;
+}
+.outline.full .cardatks {
+    display: flex;
+    justify-content: center;
+}
+.outline.full .attack {
+    background-color: rgba(0, 0, 0, 0.586);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.typeIndicator {
+    width: 95%;
+    height: 96%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.typeIndicator .row {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    padding-left: 5px;
+
+}
+.typeIndicator .row img {
+    width: 25px;
+    height: 25px;
+    box-shadow: 0px 0px 2px black;
+}
+
+.artContainer {
+    width: 350px;
+    height: 240px;
+    background-color: #e1ad01;
+    transform: translateY(-46%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.artContainer img {
+
+    transition: 0s;
+    background-position: center;
+
+}
+.art {
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+}
+.nameContainer {
+
+    width: 84%;
+    height: 94.5%;
+
+    font-size: 25px;
+
+}
+.nameContainer span {
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 2px 15px;
+
+    background:linear-gradient(to bottom,#f2f2f2 45%,#ebebeb 45%,#cfcfcf);
+    border-radius: 20px;
+
+}
+
+.healthContainer {
+
+    width: 84%;
+    height: 94.5%;
+
+    font-size: 25px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+}
+
+.healthContainer span {
+    color: black;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: fit-content;
+    padding: 2px 15px;
+
+    background:linear-gradient(to bottom,#f2f2f2 45%,#ebebeb 45%,#cfcfcf);
+    border-radius: 20px;
+
+    transform: translateX(-10px);
+
+}
+
+.cardInfo {
+
+    z-index: 999;
+
+    width: 350px;
+    height: 200px;
+
+    padding: 5px;
+    box-sizing: border-box;
+
+    transform: translateY(60%);
+
+}
+
+.cardatks {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.cardatks hr {
+    width: 100%;
+    border: 1.5px solid black;
+    filter: opacity(50%);
+}
+.attack {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 5px;
+}
+.attack * {
+    color: black;
+}
+.topsec {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+}
+.attack .revs {
+    display: flex;
+    align-items: center;
+}
+.attack .title {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+}
+.damage {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+}
+.damage * {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+.damage img {
+    transform: scale(120%);
+}
+.damage span {
+    z-index: 9999;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+}
+.revs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.revs img {
+    width: 20px;
+}
+
+.weakness {
+
+    width: 85%;
+    height: 96%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    transform: translateX(20px);
+
+}
+
+.weakness .grid {
+    display: flex;
+    flex-direction: column;
+
+    color: black;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.weakness .grid .title {
+    color: black;
+}
+
+.weakness .amount {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+    padding: 5px 15px;
+
+    background:linear-gradient(to bottom,#f2f2f2 45%,#ebebeb 45%,#cfcfcf);
+    border-radius: 20px 20px 0px 0px;
+    font-weight: 900;
+
+    border-top: 2px solid rgb(225, 225, 225);
+    border-left: 2px solid rgb(225, 225, 225);
+    border-right: 2px solid rgb(225, 225, 225);
+
+}
+.weakness img {
+    width: 20px;
+    margin-right: 5px;
+    box-shadow: 0px 0px 2px black;
+}
+.desc {
+    word-break: break-word;
+}
+
+.count {
+    color: black;
+    margin-right: 5px;
+}

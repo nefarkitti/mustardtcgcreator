@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="html2canvas.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    
+    <div class="menus">
+
+        <div class="menu">
+
+            <span class="menu-title">CARD DATA</span>
+
+            <div class="menu-content">
+
+                <div class="settings">
+
+                    <div class="setting">
+
+                        <span class="name">
+                            NAME: 
+                        </span>
+
+                        <input type="text" name="" id="cardnameval" placeholder="Card Name">
+
+                    </div>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            HEALTH: 
+                        </span>
+
+                        <input type="number" name="" id="cardhealthval" placeholder="100" min="0" max="1000">
+
+                    </div>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            CARD TYPING: 
+                        </span>
+
+                        <select name="" id="typing">
+                            <option value="corp">CORP</option>
+                            <option value="swge">SWGE</option>
+                            <option value="soda">SODA</option>
+                            <option value="absr">ABSR</option>
+                            <option value="minm">MINM</option>
+                        </select>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            CARD IMAGE: 
+                        </span>
+
+                        <input type='file' />
+
+                    </div>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            IMG OFFSET X: 
+                        </span>
+
+                        <input type="range" name="" id="offsetx" min="-200" max="200" value="0">
+
+                    </div>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            IMG OFFSET Y: 
+                        </span>
+
+                        <input type="range" name="" id="offsety" min="-200" max="200">
+
+                    </div>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            IMG SCALE: 
+                        </span>
+
+                        <input type="range" name="" id="scale" min="-100" max="200">
+
+                    </div>
+
+                    <hr>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            FULL ART: 
+                        </span>
+
+                        <input id="artcheckbox" type="checkbox" name="" id="">
+
+                    </div>
+
+                    <hr>
+
+                    <div id="skill1setting">
+
+                        <div class="setting">
+
+                            <span class="name">
+                                SK1 NAME: 
+                            </span>
+    
+                            <input type="text" name="" id="skill1name" placeholder="Skill 1 Name">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK1 DMG: 
+                            </span>
+    
+                            <input type="number" name="" id="skill1dmg" placeholder="0" min="0" max="7">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK1 REVS: 
+                            </span>
+    
+                            <input type="number" name="" id="skill1revs" placeholder="0" min="0" max="7">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK1 DESC: 
+                            </span>
+    
+                            <input type="text" name="" id="skill1desc" placeholder="Description">
+    
+                        </div>
+
+                    </div>
+
+                    <div id="skill2setting">
+
+                        <div class="setting">
+
+                            <span class="name">
+                                SK2 NAME: 
+                            </span>
+    
+                            <input type="text" name="" id="skill2name" placeholder="Skill 2 Name">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK2 DMG: 
+                            </span>
+    
+                            <input type="number" name="" id="skill2dmg" placeholder="0" min="0" max="7">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK2 REVS: 
+                            </span>
+    
+                            <input type="number" name="" id="skill2revs" placeholder="0" min="0" max="7">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK2 DESC: 
+                            </span>
+    
+                            <input type="text" name="" id="skill2desc" placeholder="Description">
+    
+                        </div>
+
+                    </div>
+
+                    <div id="skill3setting">
+
+                        <div class="setting">
+
+                            <span class="name">
+                                SK3 NAME: 
+                            </span>
+    
+                            <input type="text" name="" id="skill3name" placeholder="Skill 3 Name">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK3 DMG: 
+                            </span>
+    
+                            <input type="number" name="" id="skill3dmg" placeholder="0" min="0" max="7">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK3 REVS: 
+                            </span>
+    
+                            <input type="number" name="" id="skill3revs" placeholder="0" min="0" max="7">
+    
+                        </div>
+    
+                        <div class="setting">
+    
+                            <span class="name">
+                                SK3 DESC: 
+                            </span>
+    
+                            <input type="text" name="" id="skill3desc" placeholder="Description">
+    
+                        </div>
+
+                    </div>
+                    
+                    <div class="setting">
+                        <button onclick="loadSkill(1)">1</button>
+                        <button onclick="loadSkill(2)">2</button>
+                        <button onclick="loadSkill(3)">3</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <span class="menu-title">CARD DISPLAY</span>
+
+            <div class="menu-content alt">
+                
+                <div class="card-container" id="card">
+
+                    <div class="outline corp" id="card-frame">
+
+                        <div class="baseContainer">
+                            <div class="base" id="cardbase"></div>
+                        </div>
+
+                        <div class="baseContainer">
+                            <div class="typeIndicator" >
+                                <div class="row" style="transform: rotate(180deg);" >
+                                    <img id="typing-icon1" src="assets/minimalist.png" alt="" style="transform: rotate(180deg);" >
+                                    
+                                </div>
+                                <div class="row" >
+                                    
+                                    <img id="typing-icon2" class="alt" src="assets/minimalist.png" alt="" style="transform: rotate(180deg);" >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="baseContainer">
+                            <div class="artContainer">
+
+                                <div id="cardart"alt="" class="art">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="baseContainer">
+
+                            <div class="nameContainer">
+                                <span id="cardname">Master Jim</span>
+                            </div>
+
+                        </div>
+
+                        <div class="baseContainer">
+
+                            <div class="healthContainer">
+                                <span  id="cardhealth">100 HP</span>
+                            </div>
+
+                        </div>
+
+                        <div class="baseContainer">
+
+                            <div class="cardInfo">
+
+                                <div class="cardatks">
+
+                                    <div class="attack" id="skill1">
+
+                                        <div class="topsec">
+                                            <div class="revs">
+                                                <img src="assets/bullet.png" alt="">x0
+                                            </div>
+                                            <span class="title">Draw Blade</span>
+                                            <div class="damage">
+                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(50%);">
+                                                <span class="dmg">10</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="desc">Take 15 damage. Become Paraylsed.</span>
+
+                                    </div>
+
+                                    <div class="attack" id="skill2">
+
+                                        <div class="topsec">
+                                            <div class="revs">
+                                                <img src="assets/bullet.png" alt="">x4
+                                            </div>
+                                            <span class="title">Sanguine Floret Blossom</span>
+                                            <div class="damage">
+                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(50%);">
+                                                <span class="dmg">70</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="desc">Take 15 damage. Become Paraylsed.</span>
+
+                                    </div>
+
+                                    <div class="attack" id="skill3">
+
+                                        <div class="topsec">
+                                            <div class="revs">
+                                                <img src="assets/bullet.png" alt="">x4
+                                            </div>
+                                            <span class="title">Sanguine Floret Blossom</span>
+                                            <div class="damage">
+                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(50%);">
+                                                <span class="dmg">70</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="desc">Take 15 damage. Become Paraylsed.</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="baseContainer" id="weaknessframe">
+
+                            <div class="weakness">
+
+                                <div class="grid">
+
+                                    <span class="title">WEAKNESSES</span>
+
+                                    <div class="amount">
+
+                                        <img src="assets/corp.png" alt="">
+
+                                        <span id="w1" class="count">+10</span>
+
+                                        <img src="assets/swge.png" alt="">
+
+                                        <span id="w2" class="count">+10</span>
+
+                                        <img src="assets/soda.png" alt="">
+
+                                        <span id="w3" class="count">+10</span>
+
+                                        <img src="assets/absr.png" alt="">
+
+                                        <span id="w4" class="count">+10</span>
+
+                                        <img src="assets/minm.png" alt="">
+
+                                        <span id="w5" class="count">+10</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button onclick="saveImage()">SAVE IMAGE</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
