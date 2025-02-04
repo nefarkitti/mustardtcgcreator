@@ -25,6 +25,8 @@ cardart.style.backgroundPosition = `${cardartSettings[0]}px ${cardartSettings[1]
 cardbase.style.backgroundPosition = `${cardartSettings[0]}px ${cardartSettings[1]}px`
 cardart.style.backgroundSize = `${cardartSettings[2]}%`
 cardbase.style.backgroundSize = `${cardartSettings[2]}%`
+document.getElementById("credit").innerText = document.getElementById("artcreditval").value
+document.getElementById("flavour").innerText = document.getElementById("flavourval").value
 
 for (let i = 0 ; i < 3;i++) {
 
@@ -253,6 +255,19 @@ window.addEventListener('load', function() {
             cardbase.style.backgroundImage = `url('${URL.createObjectURL(this.files[0])}')`
         }
     });
+
+    document.getElementById("artcreditval").addEventListener('input', function() {
+
+        document.getElementById("credit").innerText = document.getElementById("artcreditval").value
+
+    })
+
+    document.getElementById("flavourval").addEventListener('input', function() {
+
+        document.getElementById("flavour").innerText = document.getElementById("flavourval").value
+
+    })
+
     artcheck.addEventListener('change', function() {
 
         card.classList.remove("full")
