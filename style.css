@@ -756,3 +756,92 @@ input {
 .attack .title {
     width: 100%;
 }
+
+.company {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 7px;
+
+    transform: translateY(-2px);
+
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+
+    filter: opacity(50%);
+
+}
+
+.full .nameContainer span {
+
+    background: none;
+
+    color: white !important;
+
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+
+    font-weight: 900;
+    font-size: 28px;
+
+}
+
+.full .healthContainer span {
+
+    background: none;
+
+    color: white !important;
+
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+
+    font-weight: 900;
+    font-size: 28px;
+
+}
+
+.full .rholo {
+    display: none !important;
+}
+.rholo {
+    width: 95%;
+    height: 96%;
+}
+.rholo.corp {
+    background: url('assets/rholo/corp.png');
+    background-repeat: repeat !important;
+    background-size: 20%;
+}
+.rholo.swge {
+    background: url('assets/rholo/swge.png');
+    background-repeat: repeat !important;
+    background-size: 20%;
+}
+.rholo.soda {
+    background: url('assets/rholo/soda.png');
+    background-repeat: repeat !important;
+    background-size: 20%;
+}
+.rholo.absr {
+    background: url('assets/rholo/absr.png');
+    background-repeat: repeat !important;
+    background-size: 20%;
+}
+.rholo.minm {
+    background: url('assets/rholo/minm.png');
+    background-repeat: repeat !important;
+    background-size: 20%;
+}
