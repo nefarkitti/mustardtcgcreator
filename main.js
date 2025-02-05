@@ -25,10 +25,27 @@ cardart.style.backgroundPosition = `${cardartSettings[0]}px ${cardartSettings[1]
 cardbase.style.backgroundPosition = `${cardartSettings[0]}px ${cardartSettings[1]}px`
 cardart.style.backgroundSize = `${cardartSettings[2]}%`
 cardbase.style.backgroundSize = `${cardartSettings[2]}%`
+document.getElementById("credit").innerText = document.getElementById("artcreditval").value
+document.getElementById("flavour").innerText = document.getElementById("flavourval").value
+
 
 for (let i = 0 ; i < 3;i++) {
 
+    let skillnum = i+1
+
     document.getElementById(`skill${i+1}setting`).style.display = "none"
+
+    if (document.getElementById(`skill${skillnum}dmg`).value >= 1) {
+
+        document.getElementById(`skill${skillnum}`).querySelector(".damage").style.display = ""
+        document.getElementById(`skill${skillnum}`).querySelector(".ability").style.display = "none"
+
+    } else {
+
+        document.getElementById(`skill${skillnum}`).querySelector(".damage").style.display = "none"
+        document.getElementById(`skill${skillnum}`).querySelector(".ability").style.display = ""
+
+    }
 
 }
 
@@ -229,6 +246,18 @@ window.addEventListener('load', function() {
 
             document.getElementById(`skill${skillnum}`).querySelector(".dmg").innerText = document.getElementById(`skill${skillnum}dmg`).value
 
+            if (document.getElementById(`skill${skillnum}dmg`).value >= 1) {
+
+                document.getElementById(`skill${skillnum}`).querySelector(".damage").style.display = ""
+                document.getElementById(`skill${skillnum}`).querySelector(".ability").style.display = "none"
+
+            } else {
+
+                document.getElementById(`skill${skillnum}`).querySelector(".damage").style.display = "none"
+                document.getElementById(`skill${skillnum}`).querySelector(".ability").style.display = ""
+
+            }
+
         })
         document.getElementById(`skill${skillnum}revs`).addEventListener('input', function() {
 
@@ -253,6 +282,19 @@ window.addEventListener('load', function() {
             cardbase.style.backgroundImage = `url('${URL.createObjectURL(this.files[0])}')`
         }
     });
+
+    document.getElementById("artcreditval").addEventListener('input', function() {
+
+        document.getElementById("credit").innerText = document.getElementById("artcreditval").value
+
+    })
+
+    document.getElementById("flavourval").addEventListener('input', function() {
+
+        document.getElementById("flavour").innerText = document.getElementById("flavourval").value
+
+    })
+
     artcheck.addEventListener('change', function() {
 
         card.classList.remove("full")

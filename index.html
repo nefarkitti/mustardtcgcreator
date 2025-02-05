@@ -110,6 +110,20 @@
 
                     </div>
 
+                    <div class="setting">
+
+                        <span class="name">
+                            SPECIAL: 
+                        </span>
+
+                        <select name="" id="" selected="corp">
+                            <option value="none">None</option>
+                            <option value="holo">Holo</option>
+                            <option value="r-holo">Reverse Holo</option>
+                        </select>
+
+                    </div>
+
                     <hr>
 
                     <div id="skill1setting">
@@ -250,6 +264,28 @@
                         <button onclick="loadSkill(3)">3</button>
                     </div>
 
+                    <hr>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            ART CREDIT: 
+                        </span>
+
+                        <input type="text" name="" id="artcreditval" placeholder="@username">
+
+                    </div>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            FLAVOUR: 
+                        </span>
+
+                        <input type="text" name="" id="flavourval" placeholder="">
+
+                    </div>
+
                 </div>
 
             </div>
@@ -268,6 +304,10 @@
 
                         <div class="baseContainer">
                             <div class="base" id="cardbase"></div>
+                        </div>
+
+                        <div class="baseContainer">
+                            <div class="rholo"></div>
                         </div>
 
                         <div class="baseContainer">
@@ -322,8 +362,11 @@
                                             </div>
                                             <span class="title">Draw Blade</span>
                                             <div class="damage">
-                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(50%);">
+                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(75%);">
                                                 <span class="dmg">10</span>
+                                            </div>
+                                            <div class="ability">
+                                                <span>ABILITY</span>
                                             </div>
                                         </div>
 
@@ -339,8 +382,11 @@
                                             </div>
                                             <span class="title">Sanguine Floret Blossom</span>
                                             <div class="damage">
-                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(50%);">
+                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(75%);">
                                                 <span class="dmg">70</span>
+                                            </div>
+                                            <div class="ability">
+                                                <span>ABILITY</span>
                                             </div>
                                         </div>
 
@@ -356,8 +402,11 @@
                                             </div>
                                             <span class="title">Sanguine Floret Blossom</span>
                                             <div class="damage">
-                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(50%);">
+                                                <img src="assets/COIN01B.png" alt="" style="filter: opacity(75%);">
                                                 <span class="dmg">70</span>
+                                            </div>
+                                            <div class="ability">
+                                                <span>ABILITY</span>
                                             </div>
                                         </div>
 
@@ -404,6 +453,36 @@
                                     </div>
 
                                 </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="baseContainer">
+
+                            <div class="artcredit" id="credit">
+
+                                @flowerssmoke
+
+                            </div>
+
+                        </div>
+
+                        <div class="baseContainer">
+
+                            <div class="auraline" id="flavour">
+
+                                "All of them... died..."
+
+                            </div>
+
+                        </div>
+
+                        <div class="baseContainer">
+
+                            <div class="company">
+
+                                Ⓒ 2025 NyaCo Entertainment
 
                             </div>
 
