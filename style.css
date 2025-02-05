@@ -575,6 +575,7 @@ input {
 }
 .weakness .grid .title {
     color: black;
+    font-size: 10px;
 }
 
 .weakness .amount {
@@ -716,4 +717,42 @@ input {
     1px 1px 0 #000;  
     font-weight: 900;
 
+}
+
+.ability {
+    width: 32px;
+    transform: translateX(-60px);
+}
+.ability span {
+
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+
+    font-style: italic;
+
+    background:linear-gradient(to bottom,#f2f2f2 45%,#ebebeb 45%,#cfcfcf);
+    border-radius: 20px 10px 20px 10px;
+    font-weight: 900;
+
+    padding: 0px 10px;
+
+    border-top: 2px solid rgb(225, 225, 225);
+    border-left: 2px solid rgb(225, 225, 225);
+    border-right: 2px solid rgb(225, 225, 225);
+
+
+}
+
+.revs {
+    width: 70px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.attack .title {
+    width: 100%;
 }
