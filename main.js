@@ -3,6 +3,8 @@ const typing = document.getElementById("typing")
 const card = document.getElementById("card-frame")
 const cardbase = document.getElementById("cardbase")
 
+const container = document.getElementById("card")
+
 const cardname = document.getElementById("cardname")
 const cardhealth = document.getElementById("cardhealth")
 const cardart = document.getElementById("cardart")
@@ -14,6 +16,9 @@ const offsetx = document.getElementById("offsetx")
 const offsety = document.getElementById("offsety")
 const scale = document.getElementById("scale")
 const artcheck = document.getElementById("artcheckbox")
+
+const special = document.getElementById("special")
+const rholo = document.getElementById("rholo")
 
 let cardartSettings = [
     offsetx.value,
@@ -62,10 +67,24 @@ if (artcheck.checked == true) {
     card.classList.remove("absr")
     card.classList.remove("minm")
 
+    container.classList.remove("corp")
+    container.classList.remove("swge")
+    container.classList.remove("soda")
+    container.classList.remove("absr")
+    container.classList.remove("minm")
+
+    container.classList.add(typing.value)
+
     document.getElementById("typing-icon1").src = `assets/${typing.value}.png`
     document.getElementById("typing-icon2").src = `assets/${typing.value}.png`
 
 } else {
+
+    container.classList.remove("corp")
+    container.classList.remove("swge")
+    container.classList.remove("soda")
+    container.classList.remove("absr")
+    container.classList.remove("minm")
 
     setCardType()
 
@@ -175,6 +194,13 @@ function setCardType() {
     document.getElementById("w4").innerText = `+${absrres}`
     document.getElementById("w5").innerText = `+${minmres}`
 
+    container.classList.remove("corp")
+    container.classList.remove("swge")
+    container.classList.remove("soda")
+    container.classList.remove("absr")
+    container.classList.remove("minm")
+
+    updateRHOLO()
 
     if (artcheck.checked == true) {
 
@@ -183,6 +209,14 @@ function setCardType() {
         card.classList.remove("soda")
         card.classList.remove("absr")
         card.classList.remove("minm")
+
+        container.classList.remove("corp")
+        container.classList.remove("swge")
+        container.classList.remove("soda")
+        container.classList.remove("absr")
+        container.classList.remove("minm")
+    
+        container.classList.add(typing.value)
 
     }
 
@@ -217,6 +251,22 @@ for (let i = 0 ; i < 3;i++) {
 
         document.getElementById(`skill${skillnum}`).querySelector(".desc").innerText = document.getElementById(`skill${skillnum}desc`).value
 
+
+}
+
+function updateRHOLO() {
+
+    rholo.classList.remove("corp")
+    rholo.classList.remove("swge")
+    rholo.classList.remove("soda")
+    rholo.classList.remove("absr")
+    rholo.classList.remove("minm")
+
+    if (special.value == "rholo") {
+
+        rholo.classList.add(typing.value)
+
+    }
 
 }
 
@@ -283,6 +333,12 @@ window.addEventListener('load', function() {
         }
     });
 
+    special.addEventListener('change', function() {
+
+        updateRHOLO()
+
+    })
+
     document.getElementById("artcreditval").addEventListener('input', function() {
 
         document.getElementById("credit").innerText = document.getElementById("artcreditval").value
@@ -309,9 +365,25 @@ window.addEventListener('load', function() {
             card.classList.remove("absr")
             card.classList.remove("minm")
 
+            container.classList.remove("corp")
+            container.classList.remove("swge")
+            container.classList.remove("soda")
+            container.classList.remove("absr")
+            container.classList.remove("minm")
+        
+            container.classList.add(typing.value)
+
         } else {
 
             card.classList.add(typing.value)
+
+            container.classList.remove("corp")
+            container.classList.remove("swge")
+            container.classList.remove("soda")
+            container.classList.remove("absr")
+            container.classList.remove("minm")
+
+            updateRHOLO()
 
         }
 

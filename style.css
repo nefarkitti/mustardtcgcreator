@@ -309,6 +309,38 @@ input {
     background-position: center !important;
 }
 
+.outline.full {
+
+    background-color: white;
+
+}
+
+.card-container.corp .outline.full {
+
+    background-color: rgb(117, 117, 255)  !important;
+
+}
+.card-container.swge .outline.full {
+
+    background-color: #8A9A5B  !important;
+
+}
+.card-container.soda .outline.full {
+
+    background-color: #86193a  !important;
+
+}
+.card-container.absr .outline.full {
+
+    background-color: white  !important;
+
+}
+.card-container.minm .outline.full {
+
+    background-color: white  !important;
+
+}
+
 .outline.full .artContainer {
 
     display: none;
