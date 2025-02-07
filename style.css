@@ -435,8 +435,8 @@ input {
 }
 .nameContainer {
 
-    width: 84%;
-    height: 94.5%;
+    width: 93%;
+    height: 94%;
 
     font-size: 25px;
 
@@ -453,12 +453,14 @@ input {
     background:linear-gradient(to bottom,#f2f2f2 45%,#ebebeb 45%,#cfcfcf);
     border-radius: 20px;
 
+    font-size: 24px;
+
 }
 
 .healthContainer {
 
-    width: 84%;
-    height: 94.5%;
+    width: 82%;
+    height: 94%;
 
     font-size: 25px;
 
@@ -481,6 +483,8 @@ input {
     border-radius: 20px;
 
     transform: translateX(-10px);
+
+    font-size: 24px;
 
 }
 
@@ -591,7 +595,7 @@ input {
     justify-content: center;
     align-items: flex-end;
 
-    transform: translateX(20px);
+   /* transform: translateX(20px);*/
 
 }
 
@@ -876,4 +880,31 @@ input {
     background: url('assets/rholo/minm.png');
     background-repeat: repeat !important;
     background-size: 20%;
+}
+
+.kyrule {
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 95%;
+    height: 100%;
+
+}
+.kyrule .label {
+    display: flex;
+    flex-direction: column;
+
+    width: 160px;
+    height: 50px;
+    background-color: red;
+
+    transform: translateY(-60px);
+
+    font-size: 13px;
+
+    padding: 5px;
 }
