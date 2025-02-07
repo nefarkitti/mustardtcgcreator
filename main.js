@@ -16,6 +16,7 @@ const offsetx = document.getElementById("offsetx")
 const offsety = document.getElementById("offsety")
 const scale = document.getElementById("scale")
 const artcheck = document.getElementById("artcheckbox")
+const kycheck = document.getElementById("kycheckbox")
 
 const special = document.getElementById("special")
 const rholo = document.getElementById("rholo")
@@ -32,6 +33,18 @@ cardart.style.backgroundSize = `${cardartSettings[2]}%`
 cardbase.style.backgroundSize = `${cardartSettings[2]}%`
 document.getElementById("credit").innerText = document.getElementById("artcreditval").value
 document.getElementById("flavour").innerText = document.getElementById("flavourval").value
+
+if (kycheck.checked == true) {
+
+    document.getElementById("kyrule").style.display = ""
+    document.getElementById("kytag").style.display = ""
+
+} else {
+
+    document.getElementById("kyrule").style.display = "none"
+    document.getElementById("kytag").style.display = "none"
+
+}
 
 
 for (let i = 0 ; i < 3;i++) {
@@ -384,6 +397,22 @@ window.addEventListener('load', function() {
             container.classList.remove("minm")
 
             updateRHOLO()
+
+        }
+
+    })
+
+    kycheck.addEventListener('input', function() {
+
+        if (kycheck.checked == true) {
+
+            document.getElementById("kyrule").style.display = ""
+            document.getElementById("kytag").style.display = ""
+
+        } else {
+
+            document.getElementById("kyrule").style.display = "none"
+            document.getElementById("kytag").style.display = "none"
 
         }
 

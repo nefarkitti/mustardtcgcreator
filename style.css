@@ -511,6 +511,8 @@ input {
     display: flex;
     justify-content: center;
 
+    transform: translateY(-20px);
+
 }
 .cardatks hr {
     width: 100%;
@@ -898,13 +900,116 @@ input {
     display: flex;
     flex-direction: column;
 
-    width: 160px;
-    height: 50px;
+    width: 130px;
+    height: 35px;
     background-color: red;
+    background: rgb(255,255,255);
+    background: linear-gradient(162deg, rgba(255,255,255,1) 0%, wheat 23%, rgb(145, 96, 51) 88%);
 
-    transform: translateY(-60px);
+    outline: 2px solid rgb(79, 71, 58);
 
-    font-size: 13px;
+    transform: translateY(-50px) translateX(-10px);
 
-    padding: 5px;
+    font-size: 10px;
+
+    padding: 5px 10px;  
+
+    padding-right: 0px;
+    padding-left: 15px;
+
+    border-radius: 20px 10px 20px 10px;
+
+    justify-content: center;
+
+}
+.kyrule .label span {
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+   font-style: italic;
+   font-weight: 600;
+   text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000; 
+   font-size: 9px;
+}
+.kyrule .label .kytitle {
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+}
+
+.kytag {
+
+    background-color: red;
+    z-index: 9999;
+    width: 50px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 900;
+    font-style: italic;
+
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(162deg, rgba(255,255,255,1) 0%, wheat 23%, rgb(145, 96, 51) 88%);
+
+    outline: 2px solid rgb(79, 71, 58);
+
+    font-size: 20px;
+
+    border-radius: 30px 15px 30px 15px;
+
+    transform: translateY(-200px) translateX(130px);
+
+}
+
+.full .kytag {
+
+    transform: translateY(-220px) translateX(160px);
+
+}
+
+.minm .attack * {
+
+    color: black !important;
+    text-shadow:
+    -1px -1px 0 #cccccc,
+    1px -1px 0 #cccccc,
+    -1px 1px 0 #cccccc,
+    1px 1px 0 #cccccc; 
+
+}
+.minm .dmg {
+
+    color: white !important;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+}
+
+.minm .full .attack * {
+
+    color: white !important;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
 }
