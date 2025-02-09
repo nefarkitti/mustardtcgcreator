@@ -146,6 +146,8 @@ function saveImage() { // firee lifesaver
 
 }
 
+updateRHOLO()
+
 function setCardType() {
 
     card.classList.remove("corp")
@@ -274,6 +276,14 @@ function updateRHOLO() {
     rholo.classList.remove("soda")
     rholo.classList.remove("absr")
     rholo.classList.remove("minm")
+
+    document.getElementById("holo").style.display = "none"
+    
+    if (special.value == "holo") {
+
+        document.getElementById("holo").style.display = ""
+
+    }
 
     if (special.value == "rholo") {
 

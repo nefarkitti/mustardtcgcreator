@@ -184,6 +184,8 @@ input {
     grid-template-columns: 1fr;
     display: inline-grid;
 
+    z-index: -20;
+
 }
 
 .outline div {
@@ -850,10 +852,6 @@ input {
     font-size: 28px;
 
 }
-
-.full .rholo {
-    display: none !important;
-}
 .rholo {
     width: 95%;
     height: 96%;
@@ -1012,4 +1010,50 @@ input {
     -1px 1px 0 #000,
     1px 1px 0 #000; 
 
+}
+
+.holo {
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 99999999999999;
+    grid-template-columns: 1fr;
+    display: inline-grid;
+
+}
+
+.holo img {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.full .rholo {
+
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+}
+
+.base {
+    z-index: 1;
+}
+.holo {
+    z-index: 9999999;
+}
+.typeIndicator {
+    z-index: 2;
+}
+.nameContainer {
+    z-index: 2;
+}
+.healthContainer {
+    z-index: 2;
+}
+#weaknessframe {
+    z-index: 2;
+}
+.artContainer {
+    z-index: 2;
 }
