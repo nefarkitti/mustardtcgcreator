@@ -65,6 +65,16 @@ for (let i = 0 ; i < 3;i++) {
 
     }
 
+    if (document.getElementById(`skill${skillnum}revs`).value >= 1) {
+
+        document.getElementById(`revs${skillnum}`).style.display = ""
+
+    } else {
+
+        document.getElementById(`revs${skillnum}`).style.display = "none"
+
+    }
+
 }
 
 cardname.innerText = cardnameval.value
@@ -335,6 +345,16 @@ window.addEventListener('load', function() {
         document.getElementById(`skill${skillnum}revs`).addEventListener('input', function() {
 
             document.getElementById(`skill${skillnum}`).querySelector(".revs").innerHTML = `<img src="assets/bullet.png" alt="">x` + document.getElementById(`skill${skillnum}revs`).value
+
+            if (document.getElementById(`skill${skillnum}revs`).value >= 1) {
+
+                document.getElementById(`revs${skillnum}`).style.display = ""
+
+            } else {
+
+                document.getElementById(`revs${skillnum}`).style.display = "none"
+
+            }
 
         })
         document.getElementById(`skill${skillnum}desc`).addEventListener('input', function() {
