@@ -855,6 +855,7 @@ input {
 .rholo {
     width: 95%;
     height: 96%;
+    z-index: 1;
 }
 .rholo.corp {
     background: url('assets/rholo/corp.png');
@@ -1021,6 +1022,8 @@ input {
     grid-template-columns: 1fr;
     display: inline-grid;
 
+    overflow: hidden;
+
 }
 
 .holo img {
@@ -1056,4 +1059,31 @@ input {
 }
 .artContainer {
     z-index: 2;
+}
+
+.promotag {
+
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+    background-color: rgb(177, 177, 177);
+
+    border-radius: 10px;
+    border: 2px solid rgb(88, 88, 88);
+
+    filter: opacity(40%);
+
+    background-image: url('assets/promotag.png');
+    background-size: 90%;
+    background-position: center;
+
+    transform: translateX(160px);
+
+}
+
+.settings hr {
+    width: 100%;
+    filter: opacity(5%);
+    margin: 0;
+    margin-bottom: 10px;
 }

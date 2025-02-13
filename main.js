@@ -1,4 +1,4 @@
-
+// this is probably a horrible way of going about things but if it works it works
 const typing = document.getElementById("typing")
 const card = document.getElementById("card-frame")
 const cardbase = document.getElementById("cardbase")
@@ -17,6 +17,7 @@ const offsety = document.getElementById("offsety")
 const scale = document.getElementById("scale")
 const artcheck = document.getElementById("artcheckbox")
 const kycheck = document.getElementById("kycheckbox")
+const promocheck = document.getElementById("promocheckbox")
 
 const special = document.getElementById("special")
 const rholo = document.getElementById("rholo")
@@ -110,6 +111,16 @@ if (artcheck.checked == true) {
     container.classList.remove("minm")
 
     setCardType()
+
+}
+
+if (promocheck.checked == true) {
+
+    document.getElementById("promotag").style.display = ""
+
+} else {
+
+    document.getElementById("promotag").style.display = "none"
 
 }
 
@@ -443,6 +454,20 @@ window.addEventListener('load', function() {
 
             document.getElementById("kyrule").style.display = "none"
             document.getElementById("kytag").style.display = "none"
+
+        }
+
+    })
+
+    promocheck.addEventListener('input', function() {
+
+        if (promocheck.checked == true) {
+
+            document.getElementById("promotag").style.display = ""
+
+        } else {
+
+            document.getElementById("promotag").style.display = "none"
 
         }
 

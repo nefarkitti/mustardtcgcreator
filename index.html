@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="html2canvas.js"></script>
     <script src="main.js" defer></script>
+    <link rel="shortcut icon" href="assets/mustcg.png" type="image/png">
 </head>
 <body>
     
@@ -16,7 +17,7 @@
 
             <span class="menu-title">CARD DATA</span>
 
-            <div class="menu-content">
+            <div class="menu-content settings-content">
 
                 <div class="settings">
 
@@ -106,7 +107,7 @@
                             FULL ART: 
                         </span>
 
-                        <input id="artcheckbox" type="checkbox" name="" id="">
+                        <input id="artcheckbox" type="checkbox" name="">
 
                     </div>
 
@@ -130,7 +131,17 @@
                             KY: 
                         </span>
 
-                        <input id="kycheckbox" type="checkbox" name="" id="">
+                        <input id="kycheckbox" type="checkbox" name="">
+
+                    </div>
+
+                    <div class="setting">
+
+                        <span class="name">
+                            PROMO: 
+                        </span>
+
+                        <input id="promocheckbox" type="checkbox" name="">
 
                     </div>
 
@@ -268,7 +279,7 @@
 
                     </div>
                     
-                    <div class="setting">
+                    <div class="setting" style="justify-content: space-around;">
                         <button onclick="loadSkill(1)">1</button>
                         <button onclick="loadSkill(2)">2</button>
                         <!--<button onclick="loadSkill(3)">3</button>-->
@@ -526,6 +537,10 @@
 
                         </div>
 
+                        <div class="baseContainer">
+                            <div class="promotag" id="promotag"></div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -535,6 +550,26 @@
             </div>
 
         </div>
+
+        <!--<div class="menu">
+            <span class="menu-title">NEWS</span>
+
+            <div class="menu-content">
+
+                <div class="text-content">
+
+                    v1 (since creation) <br>
+
+                    <ul>
+
+                        <li>fixedaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+
+                    </ul>
+                    
+                </div>
+
+            </div>
+        </div>-->
 
     </div>
 
